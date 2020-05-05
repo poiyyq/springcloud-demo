@@ -1,0 +1,22 @@
+server:
+  port: 8901
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8100/eureka/
+spring:
+  application:
+    name: app-storage
+  datasource:
+    url: jdbc:mysql://bigdata-pro01.kfk.com:3306/winnie?characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false&useSSL=true
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: my_test_tx_group
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.winnie.mapper

@@ -1,0 +1,8 @@
+server:
+  port: 8011
+spring:
+  application:
+    name: app-order
+  cloud:
+    zookeeper:
+      connect-string: bigdata-pro01.kfk.com:2181

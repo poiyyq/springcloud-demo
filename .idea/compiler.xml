@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="order-zk" />
+        <module name="member-zk" />
+        <module name="order" />
+        <module name="eureka-server2" />
+        <module name="gateway" />
+        <module name="storageservice" />
+        <module name="member" />
+        <module name="configserver" />
+        <module name="eurekaserver" />
+        <module name="memberservice" />
+        <module name="common" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="member (1)" target="1.8" />
+      <module name="member-zookeeper" target="1.8" />
+      <module name="member2" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common" options="-parameters" />
+      <module name="configserver" options="-parameters" />
+      <module name="eureka-server2" options="-parameters" />
+      <module name="eurekaserver" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="member" options="-parameters" />
+      <module name="member (1)" options="-parameters" />
+      <module name="member-zk" options="-parameters" />
+      <module name="member-zookeeper" options="-parameters" />
+      <module name="member2" options="-parameters" />
+      <module name="memberservice" options="-parameters" />
+      <module name="order" options="-parameters" />
+      <module name="order-zk" options="-parameters" />
+      <module name="storage" options="-parameters" />
+      <module name="storageservice" options="-parameters" />
+    </option>
+  </component>
+</project>

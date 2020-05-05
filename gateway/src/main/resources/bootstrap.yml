@@ -1,0 +1,32 @@
+server:
+  port: 8005
+spring:
+  application:
+    name: gateway
+  cloud:
+    config:
+      discovery:
+        service-id: config-server
+        enabled: true
+      profile: dev
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8100/eureka/
+zuul:
+  routes:
+    api-member:
+      path: /api-member/**
+      serviceId: app-member
+    api-order:
+      path: /api-order/**
+      serviceId: app-order
+
+# 开启actuator 所有端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+swagger:
+  resources: "会员服务,/api-member/v2/api-docs,v2;订单服务,/api-order/v2/api-docs,v2"

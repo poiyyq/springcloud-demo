@@ -1,0 +1,22 @@
+server:
+  port: 8899
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/yan_sheng/springcloud2.0-config-server.git
+          # 配置文件路径
+          search-paths:
+            - springcloud2.0-config-server
+          # 分支环境
+          label: master
+          username: xxx
+          password: xxx
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8100/eureka/

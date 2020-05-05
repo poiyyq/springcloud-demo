@@ -1,0 +1,36 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: app-order
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://bigdata-pro01.kfk.com:3306/winnie?characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false&useSSL=true
+    username: root
+    password: root
+  cloud:
+    alibaba:
+      seata: # 引入seata分布式事务模块，必须依赖resource/registry.yml
+        tx-service-group: my_test_tx_group # 定义事务组名称
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8100/eureka/,http://127.0.0.1:9100/eureka/
+  instance:
+    # 每隔1秒发送一次心跳
+    lease-renewal-interval-in-seconds: 1
+    # 超过2秒没接受到服务端的请求时剔除该服务
+    lease-expiration-duration-in-seconds: 2
+ribbon:
+  # 客户端连接服务端所用时间
+  ReadTimeout: 5000
+  # 客户端请求服务端资源所用时间
+  ConnectTimeout: 5000
+# 开启断路器
+feign:
+  hystrix:
+    enabled: true
+mybatis:
+  type-aliases-package: com.winnie.mapper
+  configuration:
+    map-underscore-to-camel-case: true
