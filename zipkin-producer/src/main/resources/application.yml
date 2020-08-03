@@ -6,11 +6,14 @@ spring:
     name: zipkin-producer
   sleuth:
     sampler:
-      # 采集率，测试时用1， 上生产并发高的时候用0.01或者更低
-      probability: 1
+      probability: 1 # 采集率，测试时用1， 上生产并发高的时候用0.01或者更低
     feign:
       enabled: true
   zipkin:
     base-url: http://centos7:9411
     sender:
-      type: web
+      type: rabbit
+  rabbitmq:
+    addresses: centos7:5672
+    username: admin
+    password: admin

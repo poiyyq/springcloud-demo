@@ -1,0 +1,16 @@
+server:
+  port: 7001
+spring:
+  application:
+    name: mq-rabbit
+  rabbitmq:
+    host: centos7
+    port: 5672
+    username: admin
+    password: admin
+    template:
+      exchange: myexchange
+      routing-key: myroutingkey
+    cache:
+      connection:
+        mode: CONNECTION

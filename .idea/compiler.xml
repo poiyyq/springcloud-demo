@@ -13,6 +13,7 @@
         <module name="order-zk" />
         <module name="zipkinsample" />
         <module name="eurekaserver" />
+        <module name="mqrabbit" />
         <module name="order" />
         <module name="gateway" />
         <module name="memberservice" />
@@ -47,6 +48,7 @@
       <module name="member-zookeeper" options="-parameters" />
       <module name="member2" options="-parameters" />
       <module name="memberservice" options="-parameters" />
+      <module name="mqrabbit" options="-parameters" />
       <module name="order" options="-parameters" />
       <module name="order-zk" options="-parameters" />
       <module name="storage" options="-parameters" />

@@ -23,6 +23,11 @@
             <artifactId>spring-cloud-starter-openfeign</artifactId>
             <version>2.0.0.M1</version>
         </dependency>
+        <!-- 提供rabbit链接，可以供zipkin作为收集器使用 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-stream-binder-rabbit</artifactId>
+        </dependency>
 
     </dependencies>
 
