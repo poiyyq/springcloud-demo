@@ -19,13 +19,13 @@
         <module name="common" />
         <module name="eureka-server2" />
         <module name="member" />
-        <module name="algorithm" />
         <module name="zipkin-consumer" />
         <module name="configserver" />
         <module name="zipkin-producer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="algorithm" target="1.8" />
       <module name="member (1)" target="1.8" />
       <module name="member-zookeeper" target="1.8" />
       <module name="member2" target="1.8" />
