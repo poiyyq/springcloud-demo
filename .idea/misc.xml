@@ -11,6 +11,7 @@
       <set>
         <option value="$PROJECT_DIR$/member-zookeeper/pom.xml" />
         <option value="$PROJECT_DIR$/member2/pom.xml" />
+        <option value="$PROJECT_DIR$/zipkin-client2/pom.xml" />
       </set>
     </option>
   </component>

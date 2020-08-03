@@ -1,0 +1,28 @@
+server:
+  port: 9000
+#  servlet:
+#    context-path: /zipkin
+spring:
+  application:
+    name: zipkin-demo
+  sleuth:
+    enabled: false
+    sampler:
+      # 采样率，推荐0.1，百分之百收集的话存储可能扛不住
+      probability: 0.1
+
+zipkin:
+  storage:
+    type: elasticsearch
+    StorageComponent: elasticsearch
+    elasticsearch:
+      hosts: 127.0.0.1:9200
+      cluster: elasticsearch
+      index: zipkin
+      index-shards: 5
+      index-replicas: 1
+      maxHttpHeaderSize: 8192
+  ui:
+    enabled: true
+
+

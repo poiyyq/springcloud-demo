@@ -3,11 +3,11 @@ server:
 eureka:
   instance:
     hostname: 127.0.0.1
-#  client:
-#    register-with-eureka: true
-#    fetch-registry: true
-#    service-url:
-#      defaultZone: http://127.0.0.1:9100/eureka/
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:9100/eureka/
   server:
     # 本地环境下关闭eureka自我保护机制
     enable-self-preservation: false

@@ -1,0 +1,16 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: zipkin-producer
+  sleuth:
+    sampler:
+      # 采集率，测试时用1， 上生产并发高的时候用0.01或者更低
+      probability: 1
+    feign:
+      enabled: true
+  zipkin:
+    base-url: http://centos7:9411
+    sender:
+      type: web
